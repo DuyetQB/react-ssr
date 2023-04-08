@@ -2,10 +2,10 @@
   "name": "react-ssr-example",
   "version": "1.1.0",
   "description": "Example React Server-Side Rendering (SSR).",
-  "main": "run.js",
-  "type":"commonjs",
+  "main": "run.cjs",
+  "type":"module",
   "scripts": {
-    "start": "nodemon --experimental-modules run.js",
+    "start": "nodemon --experimental-modules run.cjs",
     "lint": "eslint --ignore-path .gitignore *.js components/**/*.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js"
