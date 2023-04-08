@@ -1,13 +1,21 @@
 /* eslint no-console: "off" */
 
-import ReactDomServer from 'react-dom/server';
+// const ReactDomServer = require('react-dom/server');
+// const express = require('express');
+// const browserify = require('browserify');
+// const babelify = require('babelify');
+// const App = require('./src/components/App.jsx');
+// const Post = require('./src/components/Post.jsx');
+// // const React = require('React');
+// const axios = require('axios');
 import express from 'express';
 import browserify from 'browserify';
 import babelify from 'babelify';
 import App from './src/components/App.jsx';
 import Post from './src/components/Post.jsx';
-import React from 'react';
-import axios from "axios"
+ import React from 'react';
+ import axios from "axios";
+ import ReactDomServer from 'react-dom/server';
 require('dotenv').config();
 
 const app = express();
