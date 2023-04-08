@@ -14,7 +14,7 @@ const app = express();
 const port = 3000 || process.env.REACT_APP;
 
 app.get('/client.js', (req, res) => {
-  browserify('./src/index.js', { debug: true }).transform(babelify).bundle().pipe(res);
+  browserify('./build/client.js', { debug: true }).transform(babelify).bundle().pipe(res);
 });
 
 app.get('/', (req, res) => {
