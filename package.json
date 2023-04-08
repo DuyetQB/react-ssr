@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon run.js",
     "lint": "eslint --ignore-path .gitignore *.js components/**/*.jsx",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lenodev",
   "dependencies": {
