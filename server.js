@@ -4,13 +4,14 @@ import ReactDomServer from 'react-dom/server';
 import express from 'express';
 import browserify from 'browserify';
 import babelify from 'babelify';
-import App from './components/App.jsx';
-import Post from './components/Post.jsx';
+import App from './src/components/App.jsx';
+import Post from './src/components/Post.jsx';
 import React from 'react';
 import axios from "axios"
+require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.REACT_APP;
 
 app.get('/bundle.js', (req, res) => {
   browserify('./client.js', { debug: true }).transform(babelify).bundle().pipe(res);
