@@ -12,6 +12,4 @@ Example React Server-Side Rendering (SSR) application using [react-grid-system](
 
 4. Open http://localhost:3000/ in your browser.
 
-## License
 
-MIT
