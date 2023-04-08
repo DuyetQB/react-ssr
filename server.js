@@ -13,7 +13,7 @@ require('dotenv').config();
 const app = express();
 const port = 3000 || process.env.REACT_APP;
 
-app.get('/bundle.js', (req, res) => {
+app.get('/client.js', (req, res) => {
   browserify('./src/index.js', { debug: true }).transform(babelify).bundle().pipe(res);
 });
 
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <div id="app">${content}</div>
-        <script src="bundle.js"></script>
+        <script src="client.js"></script>
       </body>
     </html>
   `
@@ -61,7 +61,7 @@ app.get('/post/:id', async (req, res) => {
       </head>
       <body>
         <div id="app">${postcontent}</div>
-        <script src="bundle.js"></script>
+        <script src="client.js"></script>
       </body>
     </html>
   `
