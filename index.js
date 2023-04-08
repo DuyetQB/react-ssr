@@ -37,8 +37,6 @@ app.get('/', (req, res) => {
   `
 
 res.send(temp)
-
-  // res.send(mt);
   console.info('react-grid-system example rendered server-side.');
 });
 
