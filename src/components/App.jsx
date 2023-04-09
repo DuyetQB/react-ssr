@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-grid-system";
 
-function App() {
+export const App = () => {
   const [content, setContent] = useState([]);
 
   const getData = async () => {
@@ -35,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+// export default App ;

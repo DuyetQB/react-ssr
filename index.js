@@ -1,25 +1,26 @@
 /* eslint no-console: "off" */
 
-// const ReactDomServer = require('react-dom/server');
-// const express = require('express');
-// const browserify = require('browserify');
-// const babelify = require('babelify');
-// const App = require('./src/components/App.jsx');
-// const Post = require('./src/components/Post.jsx');
-// // const React = require('React');
-// const axios = require('axios');
-import express from 'express';
-import browserify from 'browserify';
-import babelify from 'babelify';
-import App from './src/components/App.jsx';
-import Post from './src/components/Post.jsx';
- import React from 'react';
- import axios from "axios";
- import ReactDomServer from 'react-dom/server';
-require('dotenv').config();
+var express = require('express');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var {App} = require('./src/components/App.jsx');
+var { Post } = require('./src/components/Post.jsx');
+var React = require('react');
+var axios = require('axios');
+var ReactDomServer = require('react-dom/server');
+
+// require('React');
+// import express from 'express';
+// import browserify from 'browserify';
+// import babelify from 'babelify';
+// import App from './src/components/App.jsx';
+// import Post from './src/components/Post.jsx';
+//  import React from 'react';
+//  import axios from "axios";
+//  import ReactDomServer from 'react-dom/server';
 
 const app = express();
-const port = 3000 || process.env.REACT_APP;
+const port = 3000
 
 app.get('/client.js', (req, res) => {
   browserify('./build/client.js', { debug: true }).transform(babelify).bundle().pipe(res);
@@ -27,14 +28,15 @@ app.get('/client.js', (req, res) => {
 
 app.get('/', (req, res) => {
 
+  console.log("App:",typeof (<App />));
   const content = ReactDomServer.renderToString(<App />);
 
      let  temp = `
     <!DOCTYPE html>
     <html>
       <head>
-        <title>React SSR Example</title>
-        <meta name="description" content="title"/>
+        <title>Lenodev</title>
+        <meta name="description" content="description"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
       </head>
       <body>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Post( { data }) {
+export const Post = ( { data }) => {
   return (
     <div>
         <div>
@@ -16,4 +16,3 @@ function Post( { data }) {
   )
 }
 
-export default Post

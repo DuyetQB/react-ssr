@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route ,BrowserRouter } from 'react-router-dom';
-import App from './App.jsx';
-import Post from './Post.jsx';
+import { App } from './App.jsx';
+import { Post } from './Post.jsx';
 function MainRoutes() {
   return (
     <BrowserRouter>
