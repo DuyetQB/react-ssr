@@ -28,7 +28,6 @@ app.get('/client.js', (req, res) => {
 
 app.get('/', (req, res) => {
 
-  console.log("App:",typeof (<App />));
   const content = ReactDomServer.renderToString(<App />);
 
      let  temp = `
