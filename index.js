@@ -8,6 +8,7 @@ var { Post } = require('./src/components/Post.jsx');
 var React = require('react');
 var axios = require('axios');
 var ReactDomServer = require('react-dom/server');
+require('@babel/register');
 
 // require('React');
 // import express from 'express';
